@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aimilier 的童话绘本风个人网站">
+    <title>Aimilier 的小世界</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <main class="site-shell">
+      <section class="cover" id="cover" aria-labelledby="coverTitle">
+        <div class="cover-card">
+          <img class="brand-logo cover-logo" src="logo/logo.png" alt="Aimilier">
+          <p class="eyebrow">Welcome to aimilier.cn</p>
+          <h1 id="coverTitle">打开一本会发光的小小故事书</h1>
+          <p class="cover-text">这里会收藏故事、画画、观察和每一次有趣的网页练习。</p>
+          <button class="primary-button" type="button" id="enterButton">进入小世界</button>
+        </div>
+      </section>
+
+      <section class="app is-hidden" id="app" aria-label="文章阅读区">
+        <header class="site-header">
+          <a class="brand" href="./" aria-label="回到 Aimilier 首页">
+            <img class="brand-logo" src="logo/logo.png" alt="Aimilier">
+          </a>
+          <nav class="top-actions" aria-label="站点操作">
+            <button class="ghost-button" type="button" id="openMenuButton">文章目录</button>
+          </nav>
+        </header>
+
+        <article class="reader" id="reader" aria-live="polite">
+          <div class="reader-status">故事正在打开中...</div>
+        </article>
+
+        <footer class="reader-controls" aria-label="文章切换">
+          <button class="circle-button" type="button" id="prevButton" aria-label="上一篇">上一页</button>
+          <p class="page-indicator" id="pageIndicator">- / -</p>
+          <button class="circle-button" type="button" id="nextButton" aria-label="下一篇">下一页</button>
+        </footer>
+      </section>
+    </main>
+
+    <dialog class="post-menu" id="postMenu" aria-labelledby="menuTitle">
+      <div class="menu-header">
+        <div>
+          <p class="eyebrow">Story Shelf</p>
+          <h2 id="menuTitle">文章目录</h2>
+        </div>
+        <button class="icon-button" type="button" id="closeMenuButton" aria-label="关闭目录">×</button>
+      </div>
+      <div class="post-grid" id="postGrid"></div>
+    </dialog>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="scripts/posts.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
